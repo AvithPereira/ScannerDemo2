@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScannerDemo2.Android", "ScannerDemo2\ScannerDemo2.Android\ScannerDemo2.Android.csproj", "{6377A24F-92D5-49AE-A3FA-9AEE8787B798}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScannerDemo2.iOS", "ScannerDemo2\ScannerDemo2.iOS\ScannerDemo2.iOS.csproj", "{EB732CBF-7872-47AA-8063-64058D132DF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScannerDemo2", "ScannerDemo2\ScannerDemo2\ScannerDemo2.csproj", "{0DFCEE38-3F6A-4868-A22D-07E35FA4D663}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6377A24F-92D5-49AE-A3FA-9AEE8787B798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6377A24F-92D5-49AE-A3FA-9AEE8787B798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6377A24F-92D5-49AE-A3FA-9AEE8787B798}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6377A24F-92D5-49AE-A3FA-9AEE8787B798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6377A24F-92D5-49AE-A3FA-9AEE8787B798}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6377A24F-92D5-49AE-A3FA-9AEE8787B798}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{EB732CBF-7872-47AA-8063-64058D132DF4}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{EB732CBF-7872-47AA-8063-64058D132DF4}.Debug|Any CPU.Build.0 = Debug|iPhone
+		{EB732CBF-7872-47AA-8063-64058D132DF4}.Debug|Any CPU.Deploy.0 = Debug|iPhone
+		{EB732CBF-7872-47AA-8063-64058D132DF4}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{EB732CBF-7872-47AA-8063-64058D132DF4}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
+		{EB732CBF-7872-47AA-8063-64058D132DF4}.Release|Any CPU.Deploy.0 = Release|iPhoneSimulator
+		{0DFCEE38-3F6A-4868-A22D-07E35FA4D663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DFCEE38-3F6A-4868-A22D-07E35FA4D663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DFCEE38-3F6A-4868-A22D-07E35FA4D663}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0DFCEE38-3F6A-4868-A22D-07E35FA4D663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DFCEE38-3F6A-4868-A22D-07E35FA4D663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DFCEE38-3F6A-4868-A22D-07E35FA4D663}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0CEF03C3-B4DF-4CDA-9B07-CB1261784211}
+	EndGlobalSection
+EndGlobal

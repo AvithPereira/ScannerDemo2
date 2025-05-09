@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:vm="clr-namespace:ScannerDemo2.ViewModels"
+             x:Class="ScannerDemo2.LoginPage"
+             x:DataType="vm:LoginPageVM"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.BindingContext>
+        <vm:LoginPageVM />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid VerticalOptions="Center" HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="8" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Frame Grid.Row="0" Grid.ColumnSpan="3" CornerRadius="25" BorderColor="Gray" Padding="10" BackgroundColor="#EDE7F6">
+                <Entry Text="{Binding CashierId}" 
+                   Placeholder="Cashier ID" 
+                   Keyboard="Default" 
+                   BackgroundColor="Transparent"
+                   HeightRequest="40" />
+            </Frame>
+
+            <Frame Grid.Row="1" Grid.ColumnSpan="3" CornerRadius="25" BorderColor="Gray" Padding="10" BackgroundColor="#EDE7F6">
+                <Entry Text="{Binding Password}"
+                   Placeholder="Password" 
+                   IsPassword="True" 
+                   BackgroundColor="Transparent"
+                   HeightRequest="40" />
+            </Frame>
+
+            <Button Grid.Row="3" Grid.Column="1" Text="Login"  
+                TextColor="White"
+                BackgroundColor="#673AB7"
+                CornerRadius="30"
+                FontAttributes="Bold"
+                Command="{Binding ValidateUserCommand}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

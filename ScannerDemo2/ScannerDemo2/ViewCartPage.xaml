@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ScannerDemo2.ViewModels"
+             x:Class="ScannerDemo2.ViewCartPage">
+    <ContentPage.BindingContext>
+        <vm:ViewCartPageVM />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout Padding="10" Spacing="10" VerticalOptions="FillAndExpand">
+
+            <!-- Cart Items List -->
+            <ListView x:Name="cartListView" ItemsSource="{Binding CartItems}"
+                SeparatorVisibility="Default" HasUnevenRows="True" >
+                <!-- Header -->
+                <ListView.Header>
+                    <Grid Padding="10" ColumnSpacing="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*" />
+                            <!-- Items -->
+                            <ColumnDefinition Width="Auto" />
+                            <!-- Quantity -->
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Items Header -->
+                        <Label Grid.Column="0" 
+                       Text="Items" 
+                       FontSize="18" 
+                       FontAttributes="Bold" 
+                       TextColor="Black" 
+                       HorizontalOptions="Start" />
+
+                        <!-- Quantity Header -->
+                        <Label Grid.Column="1" 
+                       Text="Quantity" 
+                       FontSize="18" 
+                       FontAttributes="Bold" 
+                       TextColor="Black" 
+                       HorizontalOptions="Start" />
+                    </Grid>
+                </ListView.Header>
+
+                <!-- Item Template -->
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10" ColumnSpacing="10">
+                                <!-- Define Columns -->
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*" />
+                                    <!-- Barcode -->
+                                    <ColumnDefinition Width="Auto" />
+                                    <!-- Decrement Button -->
+                                    <ColumnDefinition Width="Auto" />
+                                    <!-- Quantity -->
+                                    <ColumnDefinition Width="Auto" />
+                                    <!-- Increment Button -->
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Barcode -->
+                                <Label Grid.Column="0" 
+                               VerticalOptions="Center" 
+                               Text="{Binding Barcode}" 
+                               FontSize="16" 
+                               TextColor="Black" />
+
+                                <!-- Decrement Button -->
+                                <Button Grid.Column="1" 
+                                Text="-" 
+                                FontSize="14" 
+                                BackgroundColor="Transparent" 
+                                BorderWidth="0" 
+                                TextColor="Black"
+                                Command="{Binding BindingContext.OnRemoveItemCommand, Source={x:Reference cartListView} }"
+                                CommandParameter="{Binding .}"/>
+
+                                <!-- Quantity -->
+                                <Label Grid.Column="2" 
+                               VerticalOptions="Center" 
+                               HorizontalOptions="Center" 
+                               Text="{Binding Quantity}" 
+                               FontSize="16" 
+                               TextColor="Black" />
+
+                                <!-- Increment Button -->
+                                <Button Grid.Column="3" 
+                                Text="+" 
+                                FontSize="14" 
+                                BackgroundColor="Transparent" 
+                                BorderWidth="0" 
+                                TextColor="Black"
+                                Command="{Binding BindingContext.OnUpdateItemCommand, Source={x:Reference cartListView}}" 
+                                CommandParameter="{Binding .}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

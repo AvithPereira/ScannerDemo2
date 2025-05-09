@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:ScannerDemo2"
+             x:Class="ScannerDemo2.HomeFlyoutPage"
+             NavigationPage.HasNavigationBar="False">
+    <!-- Flyout Menu -->
+    <FlyoutPage.Flyout>
+        <pages:HomeFlyoutPageFlyout/>
+    </FlyoutPage.Flyout>
+
+    <!-- Main Content -->
+    <FlyoutPage.Detail>
+        <NavigationPage BarBackgroundColor="#EDE7F6" BarTextColor="Gray">
+            <x:Arguments>
+                <pages:HomeTabbedPage />
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>

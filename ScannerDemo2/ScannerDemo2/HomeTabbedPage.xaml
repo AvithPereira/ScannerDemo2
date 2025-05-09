@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"  
+         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+         xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"  
+         xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"  
+         xmlns:local="clr-namespace:ScannerDemo2"  
+         xmlns:vm="clr-namespace:ScannerDemo2.ViewModels"  
+         x:DataType="vm:HomeTabbedPageVM"  
+         x:Class="ScannerDemo2.HomeTabbedPage"  
+         android:TabbedPage.ToolbarPlacement="Bottom"  
+         BarBackground="#EDE7F6">  
+
+<ContentPage Title="ADD ITEMS">  
+     <ContentPage.BindingContext>  
+         <vm:HomeTabbedPageVM />  
+     </ContentPage.BindingContext>  
+
+       <Grid>  
+           <zxing:ZXingScannerView x:Name="scannerView"  
+                           IsScanning="{Binding IsScanning}"  
+                           IsEnabled="{Binding IsEnabled}"  
+                           ScanResultCommand="{Binding OnScanCommand}"   
+                           HorizontalOptions="FillAndExpand"  
+                           VerticalOptions="FillAndExpand"  
+                           BackgroundColor="Black" />  
+
+           <StackLayout VerticalOptions="Center" HorizontalOptions="Center">  
+               <Label Text="Align the barcode within the frame to scan"  
+              TextColor="White"  
+              FontSize="Medium"  
+              HorizontalOptions="Center" />  
+           </StackLayout>  
+
+           <Frame BackgroundColor="Transparent"  
+            BorderColor="White"  
+            WidthRequest="300"  
+            HeightRequest="300"  
+            HorizontalOptions="Center"  
+            VerticalOptions="Center"  
+            HasShadow="False" />  
+       </Grid>  
+</ContentPage>  
+
+<local:ViewCartPage Title="VIEW CART"/>  
+</TabbedPage>
